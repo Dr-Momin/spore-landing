@@ -1,29 +1,28 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import styles from '../styles/Home.module.css'
 import Navbar from "../components/Navbar";
-import SignIn from "../components/SignIn";
-import SignUp from "../components/SignUp";
-import Features from "./features";
+import React from "react";
+import ShieldIcon from "../components/ShieldIcon";
+import CheckIcon from "../components/CheckIcon";
+import Button from "../components/Button";
+import images from "../public/assests";
+import Footer from "../components/Footer";
+import Main from "../components/Main";
+
 
 export default function Home() {
   return (
       <div>
           <Head>
-              <title>Momin | Front-End Developers</title>
+              <title>Spore Landing</title>
               <meta name={"description"}/>
           </Head>
 
-          <div>
-              <Navbar />
-              {/*<SignIn />*/}
-              {/*<SignUp />*/}
-                <Features />
 
+          <Navbar/>
 
+          <Main />
 
-
-          </div>
 
 
       </div>

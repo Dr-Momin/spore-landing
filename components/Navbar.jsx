@@ -21,10 +21,10 @@ const Navbar = () => {
                     <Link href={"/"} >
                         <li className={"ml-10 text-sm hover:border-b font-bold "}>Home</li>
                     </Link>
-                    <Link href={"/"} >
+                    <Link href={"/about"} >
                         <li className={"ml-10 text-sm hover:border-b font-bold"}>About Us</li>
                     </Link>
-                    <Link href={"/"} >
+                    <Link href={"/features"} >
                         <li className={"ml-10 text-sm hover:border-b font-bold"}>Features</li>
                     </Link>
 
