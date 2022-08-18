@@ -11,8 +11,8 @@ const Features = () => {
 
             {/*Heading*/}
             <div className={"h-96 w-full flex flex-col justify-center items-center "}>
-                <div className={"w-[95%] sm:w-[80%] md:w-[70%] lg:w-[50%] text-center"}>
-                    <h1>Features</h1>
+                <div className={"w-[95%] sm:w-[80%] md:w-[70%] lg:w-[50%] text-center space-y-5"}>
+                    <h1 className={"text-[#005ff9]"}>Features</h1>
                     <h1>Spore is an easy way to spen,
                         send, and save money.</h1>
                 </div>

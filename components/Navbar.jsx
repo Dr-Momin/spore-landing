@@ -1,77 +1,132 @@
-import React, {useState} from 'react';
-import Image from "next/image";
-import navLogo from "../public/assests/img.png";
-import user from "../public/assests/user.png"
-import Link from "next/link";
-import {AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
+import Image from 'next/image';
+import Link from 'next/link';
+import React, { useState, useEffect } from 'react';
+import { AiOutlineClose, AiOutlineMail, AiOutlineMenu } from 'react-icons/ai';
+import user from '../public/assests/user.png';
+
 
 const Navbar = () => {
+    const [nav, setNav] = useState(false);
+    const [shadow, setShadow] = useState(false);
+    const [navBg, setNavBg] = useState('#ecf0f3');
+    const [linkColor, setLinkColor] = useState('#1f2937');
 
-    const [toggleMenu, setToggleMenu] = useState(false);
-    const handleClick = () => {
-        setToggleMenu(prev => !prev);
-    }
+
+    const handleNav = () => {
+        setNav(!nav);
+    };
+
+    useEffect(() => {
+        const handleShadow = () => {
+            if (window.scrollY >= 90) {
+                setShadow(true);
+            } else {
+                setShadow(false);
+            }
+        };
+        window.addEventListener('scroll', handleShadow);
+    }, []);
 
     return (
-        <div className={"h-20 w-full shadow-md fixed z-50 px-4 bg-white"}>
-            <div className={"flex justify-between items-center w-full h-full px-10"}>
-                <h2 className={"text-lg tracking-[0.3rem] text-[#005ff9]"}>SPORE</h2>
+        <div
+            style={{ backgroundColor: `${navBg}` }}
+            className={
+                shadow
+                    ? 'fixed w-full h-20 shadow-xl z-[100] ease-in-out duration-300'
+                    : 'fixed w-full h-20 z-[100]'
+            }
+        >
+            <div className='flex justify-between items-center w-full h-full px-12 2xl:px-16'>
+                <Link href='/'>
+                    <a>
+                        <h2 className={"text-lg tracking-[0.3rem] text-[#005ff9]"}>SPORE</h2>
+                    </a>
+                </Link>
 
-                <ul className={"hidden md:flex"}>
-                    <Link href={"/"} >
-                        <li className={"ml-10 text-sm hover:border-b font-bold "}>Home</li>
-                    </Link>
-                    <Link href={"/about"} >
-                        <li className={"ml-10 text-sm hover:border-b font-bold"}>About Us</li>
-                    </Link>
-                    <Link href={"/features"} >
-                        <li className={"ml-10 text-sm hover:border-b font-bold"}>Features</li>
-                    </Link>
-
+                <ul style={{ color: `${linkColor}` }} className='hidden md:flex font-bold'>
+                    <li className='ml-10 text-sm uppercase hover:text-[#005ff9] active:text-[#005ff9] duration-200'>
+                        <Link href='/'>Home</Link>
+                    </li>
+                    <li className='ml-10 text-sm uppercase hover:text-[#005ff9] active:text-[#005ff9] focus:text-[#005ff9] duration-200'>
+                        <Link href='/about'>About Us</Link>
+                    </li>
+                    <li className='ml-10 text-sm uppercase hover:text-[#005ff9] active:text-[#005ff9] duration-200'>
+                        <Link href='/features'>Features</Link>
+                    </li>
                 </ul>
 
-                <button className={"bg-[#005ff9] text-white px-6 py-1 rounded-full flex items-center justify-between"}> Sign in
-                    <Image src={user} width={"20"} height={"20"} className={"pl-7"} /> </button>
+                <button className={"bg-[#005ff9] hidden sm:flex text-white px-4 py-1 rounded-full items-center gap-2"}> Sign in
+                    <Image src={user} width={"20"} height={"20"} className={""} /> </button>
 
-                {!toggleMenu && <AiOutlineMenu className={" md:hidden"} size={"25"} onClick={handleClick} />}
-
-                {/*{toggleMenu && <AiOutlineClose size={"25"} onClick={handleClick}/>}*/}
+                {/* Hamburger Icon */}
+                <div
+                    style={{ color: `${linkColor}` }}
+                    onClick={handleNav}
+                    className='md:hidden'
+                >
+                    <AiOutlineMenu size={25} />
+                </div>
 
             </div>
 
-            {
-                toggleMenu && <div className={"fixed right-0 top-0 w-full h-screen bg-black/70 "}>
-                    <div className={"fixed right-0 top-0 w-[70%] bg-white h-screen ease-in duration-500"}>
 
-                        <div className={"p-4"}>
-                            <AiOutlineClose size={"25"} onClick={handleClick}/>
-                        </div>
-                        <div className={"flex items-center justify-center"}>
-                            <ul className={"flex flex-col"}>
-                                <Link href={"/"} >
-                                    <li className={"mt-10 text-sm uppercase hover:border-b"}>Home</li>
-                                </Link>
-                                <Link href={"/"} >
-                                    <li className={"mt-10 text-sm uppercase hover:border-b"}>About</li>
-                                </Link>
-                                <Link href={"/"} >
-                                    <li className={"mt-10 text-sm uppercase hover:border-b"}>Skills</li>
-                                </Link>
-                                <Link href={"/"} >
-                                    <li className={"mt-10 text-sm uppercase hover:border-b"}>Projects</li>
-                                </Link>
-                                <Link href={"/"}>
-                                    <li className={"mt-10 text-sm uppercase hover:border-b"}>Contacts</li>
-                                </Link>
-                            </ul>
+
+            {/* Mobile Menu */}
+            {/* Overlay */}
+            <div
+                className={
+                    nav ? 'md:hidden fixed left-0 top-0 w-full h-screen bg-black/70' : ''
+                }
+            >
+                {/* Side Drawer Menu */}
+                <div
+                    className={
+                        nav
+                            ? ' fixed left-0 top-0 w-[75%] sm:w-[60%] md:w-[45%] h-screen bg-[#ecf0f3] p-10 ease-in duration-500'
+                            : 'fixed left-[-100%] top-0 p-10 ease-in duration-500'
+                    }
+                >
+                    <div>
+                        <div className='flex w-full items-center justify-between'>
+                            <Link href='/'>
+                                <a>
+                                    <h2 className={"text-lg tracking-[0.3rem] text-[#005ff9]"}>SPORE</h2>
+                                </a>
+                            </Link>
+                            <div
+                                onClick={handleNav}
+                                className='rounded-full shadow-lg shadow-gray-400 p-3 cursor-pointer'
+                            >
+                                <AiOutlineClose />
+                            </div>
                         </div>
 
                     </div>
+                    <div className='pt-24 flex flex-col justify-center items-center gap-12'>
+                        <ul className='uppercase  text-center font-bold '>
+                            <Link href='/'>
+                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                                    Home
+                                </li>
+                            </Link>
+                            <Link href='/about'>
+                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                                    About Us
+                                </li>
+                            </Link>
+                            <Link href='/features'>
+                                <li onClick={() => setNav(false)} className='py-4 text-sm'>
+                                    Features
+                                </li>
+                            </Link>
+                        </ul>
+
+                        <button className={"bg-[#005ff9] flex text-white px-4 py-1 rounded-full items-center gap-2"}> Sign in
+                            <Image src={user} width={"20"} height={"20"} className={""} /> </button>
+
+                    </div>
                 </div>
-            }
-
-
-
+            </div>
         </div>
     );
 };

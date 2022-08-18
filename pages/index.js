@@ -1,13 +1,14 @@
 import Head from 'next/head'
-import Image from 'next/image'
 import Navbar from "../components/Navbar";
 import React from "react";
 import ShieldIcon from "../components/ShieldIcon";
 import CheckIcon from "../components/CheckIcon";
 import Button from "../components/Button";
+import Image from "next/image";
 import images from "../public/assests";
 import Footer from "../components/Footer";
-import Main from "../components/Main";
+import Hello from "../components/Hello";
+
 
 
 export default function Home() {
@@ -21,7 +22,9 @@ export default function Home() {
 
           <Navbar/>
 
-          <Main />
+
+
+          <Hello />
 
 
 

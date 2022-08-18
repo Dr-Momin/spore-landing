@@ -6,14 +6,17 @@ import Image from "next/image";
 import images from "../public/assests";
 import Footer from "./Footer";
 
-const Main = () => {
+const Hello = () => {
     return (
         <>
-            <div className={"w-full flex flex-col justify-center items-center"}>
+
+
+            <main className={"w-full flex flex-col justify-center items-center"}>
                 {/*Section: Home*/}
                 <section className={"bg-blue-100 w-full flex justify-center items-center"}>
 
                     <div className={"w-[80%]  bg-blue-100 flex flex-col md:flex-row pt-40 md:justify-between"}>
+
                         <div className={"flex flex-col gap-6 items-center md:w-[70%] lg:w-[50%]"}>
 
                             <div className={"flex flex-col items-center md:items-start md:pt-3 lg:pt-8"}>
@@ -23,7 +26,7 @@ const Main = () => {
                                 <div className={"flex flex-col items-center md:items-start"}>
                                     <h2 className={"text-xl font-medium pt-8 pb-4"}>We Prioritize your experience</h2>
                                     <p className={"flex items-center gap-4"}> <CheckIcon/> Zero fees Anywhere.</p>
-                                    <p className={"flex items-center gap-4"}> <CheckIcon/> Zero friction Anytime</p>
+                                    <p className={"flex items-center gap-4"}> <CheckIcon/>  Zero friction Anytime</p>
                                 </div>
 
                                 <div className={"mt-12"}>
@@ -38,9 +41,9 @@ const Main = () => {
                         </div>
                     </div>
 
-
-
                 </section>
+
+
 
                 {/*Section: What we offer*/}
                 <section className={"w-[75%] mt-20 flex flex-col gap-12 justify-center items-center"}>
@@ -67,8 +70,8 @@ const Main = () => {
                     <div className={"w-full lg:w-[70%] flex flex-col md:flex-row items-center justify-center shadow-xl bg-white   rounded-lg"}>
                         <div className={"p-6  sm:p-14 md:p-6  h-80 flex flex-col gap-4 md:w-[70%] lg:w-[80%]"}>
                             <label className={"text-[#005ff9] font-bold"}>SPORE</label>
-                            <h2 className={"text-[#005ff9] text-lg"}>The fastest way of international transactions</h2>
-                            <p>Send money internationally with <span className={"text-[#005ff9] font-bold"}>0 fees</span>  and convert to nearly any digital form of currency within the app.</p>
+                            <h2 className={"text-[#005ff9] text-lg"}>Spore enables you to stop paying fees</h2>
+                            <p>save anywhere from 1-10% in addition to flat fees for similar services</p>
                             <div className={" mx-auto lg:pt-8 xl:pt-10"}>
                                 <Button/>
                             </div>
@@ -76,7 +79,7 @@ const Main = () => {
 
                         </div>
                         <div>
-                            <Image src={images.home2} width={"400"} height={"300"} />
+                            <Image src={images.home3} width={"400"} height={"300"} />
                         </div>
                     </div>
 
@@ -115,10 +118,10 @@ const Main = () => {
 
                 {/*Footer*/}
                 <Footer />
-            </div>
+            </main>
 
         </>
     );
 };
 
-export default Main;
+export default Hello;
