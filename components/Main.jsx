@@ -6,7 +6,7 @@ import Image from "next/image";
 import images from "../public/assests";
 import Footer from "./Footer";
 
-const Hello = () => {
+const Main = () => {
     return (
         <>
 
@@ -52,7 +52,7 @@ const Hello = () => {
                     {/*Card 01*/}
                     <div className={"w-full lg:w-[70%] flex flex-col md:flex-row items-center justify-center shadow-xl bg-white   rounded-lg"}>
                         <div className={"p-6  sm:p-14 md:p-6  h-80 flex flex-col gap-4 md:w-[70%] lg:w-[80%]"}>
-                            <label className={"text-[#005ff9] font-bold"}>SPORE</label>
+                            <label className={"text-[#005ff9] font-bold bg-blue-100 w-16 px-1 rounded "}>SPORE</label>
                             <h2 className={"text-[#005ff9] text-lg"}>The fastest way of international transactions</h2>
                             <p>Send money internationally with <span className={"text-[#005ff9] font-bold"}>0 fees</span>  and convert to nearly any digital form of currency within the app.</p>
                             <div className={" mx-auto lg:pt-8 xl:pt-10"}>
@@ -69,7 +69,7 @@ const Hello = () => {
                     {/*Card 02*/}
                     <div className={"w-full lg:w-[70%] flex flex-col md:flex-row items-center justify-center shadow-xl bg-white   rounded-lg"}>
                         <div className={"p-6  sm:p-14 md:p-6  h-80 flex flex-col gap-4 md:w-[70%] lg:w-[80%]"}>
-                            <label className={"text-[#005ff9] font-bold"}>SPORE</label>
+                            <label className={"text-[#005ff9] font-bold bg-blue-100 w-16 px-1 rounded"}>SPORE</label>
                             <h2 className={"text-[#005ff9] text-lg"}>Spore enables you to stop paying fees</h2>
                             <p>save anywhere from 1-10% in addition to flat fees for similar services</p>
                             <div className={" mx-auto lg:pt-8 xl:pt-10"}>
@@ -124,4 +124,4 @@ const Hello = () => {
     );
 };
 
-export default Hello;
+export default Main;

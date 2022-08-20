@@ -11,13 +11,14 @@ const SignUp = () => {
             <Navbar />
             <div className={"w-full h-screen text-center "}>
 
+                <div className={"w-full h-full mx-auto p-2 flex flex-col  lg:justify-between md:flex-row bg-white lg:bg-[#ECF0F3] "}>
 
-                <div className={"w-full h-full mx-auto p-2 flex "}>
+                    <Image
+                        src={bgCircle} alt="" width={"650"} height={"300"}
+                        className={""} />
 
-                    <Image src={bgCircle} alt="" width={"650"} height={"300"} className={"h-screen w-96 relative"} />
-
-                    {/* Sign in box */}
-                    <div className={" w-80 flex flex-col items-center justify-center gap-4 shadow-xl rounded-lg absolute top-24 left-32 py-4" }>
+                    {/* Sign Up box */}
+                    <div className={"h-[85%] w-80 flex flex-col items-center justify-center gap-4 shadow-xl rounded-lg absolute top-16 inset-0 mx-auto  lg:mx-24" }>
                         <h2>Sign Up</h2>
                         {/*Social Media Icons*/}
                         <div className={"flex gap-5"}>
@@ -69,11 +70,17 @@ const SignUp = () => {
                         </form>
                     </div>
 
-
-                    <Image src={bgUser} width="700" height="300" className={"border-8 border-red-800"}/>
-
+                    <div className="hidden lg:flex">
+                        <Image src={bgUser} width="650" height="200" />
+                    </div>
 
                 </div>
+
+                <div className="bg-white lg:hidden px-20">
+                    <Image src={bgUser} layout={"responsive"} />
+                </div>
+
+
 
             </div>
         </>
@@ -82,3 +89,8 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+
+
+
+

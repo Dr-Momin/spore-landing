@@ -21,7 +21,7 @@ const Features = () => {
 
 
             {/*Line Break*/}
-            <div className={"h-0.5 bg-gray-200 w-[90%]"}></div>
+            <div className={"h-0.5 bg-gray-200 w-[90%] mx-auto"}></div>
 
 
             <div className={"flex flex-col justify-center items-center gap-12"}>
@@ -40,7 +40,7 @@ const Features = () => {
                 </div>
 
                 {/*Line Break*/}
-                <div className={"h-0.5 bg-gray-200 w-[90%]"}></div>
+                <div className={"h-0.5 bg-gray-200 w-[90%] mx-auto"}></div>
 
                 {/*Billing Section*/}
                 <div className={"flex flex-col md:flex-row gap-4 justify-center items-center w-[85%] "}>

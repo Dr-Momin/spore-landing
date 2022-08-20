@@ -34,22 +34,22 @@ const Footer = () => {
 
 
             {/* Line Break */}
-            <div className={"h-0.5 bg-gray-200 w-[90%] my-8"}></div>
+            <div className={"h-0.5 bg-gray-200 w-[90%] my-8 mx-auto"}></div>
 
 
             <div className={"flex justify-center items-center "}>
-                <ul className={"flex flex-col md:flex-row text-center gap-4 md:gap-0"}>
+                <ul className={"flex flex-row text-center gap-4 md:gap-12  "}>
                     <Link href={"/"} >
-                        <li className={"ml-10 text-sm hover:border-b font-bold "}>Home</li>
+                        <li className={" text-sm hover:border-b font-bold "}>Home</li>
                     </Link>
                     <Link href={"/about"} >
-                        <li className={"ml-10 text-sm hover:border-b font-bold"}>About Us</li>
+                        <li className={" text-sm hover:border-b font-bold"}>About Us</li>
                     </Link>
                     <Link href={"/contact"} >
-                        <li className={"ml-10 text-sm hover:border-b font-bold"}>Contact</li>
+                        <li className={" text-sm hover:border-b font-bold"}>Contact</li>
                     </Link>
                     <Link href={"/help"} >
-                        <li className={"ml-10 text-sm hover:border-b font-bold"}>Help</li>
+                        <li className={" text-sm hover:border-b font-bold"}>Help</li>
                     </Link>
 
                 </ul>

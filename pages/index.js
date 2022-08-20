@@ -7,7 +7,7 @@ import Button from "../components/Button";
 import Image from "next/image";
 import images from "../public/assests";
 import Footer from "../components/Footer";
-import Hello from "../components/Hello";
+import Main from "../components/Main";
 
 
 
@@ -24,7 +24,7 @@ export default function Home() {
 
 
 
-          <Hello />
+          <Main />
 
 
 
