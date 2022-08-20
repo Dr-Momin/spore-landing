@@ -8,7 +8,7 @@ import user from '../public/assests/user.png';
 const Navbar = () => {
     const [nav, setNav] = useState(false);
     const [shadow, setShadow] = useState(false);
-    const [navBg, setNavBg] = useState('#ecf0f3');
+    const [navBg, setNavBg] = useState('white');
     const [linkColor, setLinkColor] = useState('#1f2937');
 
 

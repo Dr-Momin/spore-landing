@@ -4,6 +4,7 @@ import Image from "next/image";
 import bgCircle from "../public/assests/bgCircle.png";
 import bgUser from "../public/assests/bgUser.png";
 import Navbar from "../components/Navbar";
+import Icons from "../components/Icons";
 
 
 const SignIn = () => {
@@ -19,27 +20,29 @@ const SignIn = () => {
                                className={""} />
 
                         {/* Sign in box */}
-                        <div className={"h-96 w-80 flex flex-col items-center justify-center gap-4 shadow-xl rounded-lg absolute top-1/4 inset-0 mx-auto  lg:mx-24" }>
-                            <h2>Sign In</h2>
-                            {/*Social Media Icons*/}
-                            <div className={"flex gap-3"}>
-                                <div className={"bg-gray-200 rounded p-2"}>
-                                    <FaGoogle size={"20"}  />
-                                </div>
-                                <div className={"bg-gray-200 rounded p-2"}>
-                                    <FaApple size={"20"}  />
-                                </div>
-                                <div className={"bg-gray-200 rounded p-2"}>
-                                    <FaFacebook size={"20"}  />
-                                </div>
-                                <div className={"bg-gray-200 rounded p-2"}>
-                                    <FaLinkedinIn size={"20"}  />
-                                </div>
-                                <div className={"bg-gray-200 rounded p-2"}>
-                                    <FaTwitter size={"20"}  />
-                                </div>
+                        <div className={"h-96 w-80 flex flex-col items-center justify-center gap-4 shadow-2xl rounded-lg absolute top-1/4 inset-0 mx-auto  lg:mx-24" }>
+                            <h2 style={{textShadow: "0 2px rgba(0,0,0,0.3)"}} className={"text-2xl  drop-shadow-2xl shadow-black"}>Sign In</h2>
 
-                            </div>
+                            <Icons/>
+                            {/*Social Media Icons*/}
+                            {/*<div className={"flex gap-3"}>*/}
+                            {/*    <div className={"bg-gray-200 rounded p-2"}>*/}
+                            {/*        <FaGoogle size={"20"}  />*/}
+                            {/*    </div>*/}
+                            {/*    <div className={"bg-gray-200 rounded p-2"}>*/}
+                            {/*        <FaApple size={"20"}  />*/}
+                            {/*    </div>*/}
+                            {/*    <div className={"bg-gray-200 rounded p-2"}>*/}
+                            {/*        <FaFacebook size={"20"}  />*/}
+                            {/*    </div>*/}
+                            {/*    <div className={"bg-gray-200 rounded p-2"}>*/}
+                            {/*        <FaLinkedinIn size={"20"}  />*/}
+                            {/*    </div>*/}
+                            {/*    <div className={"bg-gray-200 rounded p-2"}>*/}
+                            {/*        <FaTwitter size={"20"}  />*/}
+                            {/*    </div>*/}
+
+                            {/*</div>*/}
 
                             {/*Horizontal Row*/}
                             <div className={"flex"}>

@@ -10,34 +10,36 @@ const AboutUs = () => {
     return (
         <>
             <Navbar/>
-            <main className={"flex flex-col justify-center items-center pt-36"}>
+            <main className={"flex flex-col justify-center items-center pt-36 bg-[#FDFEFF]"}>
 
                 {/*About Us*/}
-                <section className={"text-center w-[90%] flex flex-col gap-10"}>
+                <section className={"text-center w-[90%] flex flex-col gap-10 justify-center items-center"}>
                     <div className={"text-center w-[90%] flex flex-col gap-4"}>
                         <h1 className={"text-[#005ff9]"}>About Us</h1>
                         <h1> We want to change how people send money.</h1>
+
+                        <div className={"flex flex-col gap-6 pt-8"}>
+
+                            <p>
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                At Spore, we want to simplify how people interact with the various new payment methods globally, eliminating the "Do you have …?" question worldwide.
+                            </p>
+
+
+                            {/* eslint-disable-next-line react/no-unescaped-entities */}
+                            <p>
+                                {/* eslint-disable-next-line react/no-unescaped-entities */}
+                                Additionally, we are tired of seeing fees associated with things that shouldn't have fees, like giving money to friends or family. So, we are building a solution. Whoever and wherever you are, we aim to make sending money across borders free and simplify the financial accounts you need.
+                            </p>
+
+                            <p>
+                                To achieve our goal, our amazing team has assembled to tirelessly work on improving your financial experience.
+                            </p>
+
+                        </div>
                     </div>
 
-                    <div className={"flex flex-col gap-6"}>
 
-                        <p>
-                            {/* eslint-disable-next-line react/no-unescaped-entities */}
-                            At Spore, we want to simplify how people interact with the various new payment methods globally, eliminating the "Do you have …?" question worldwide.
-                        </p>
-
-
-                        {/* eslint-disable-next-line react/no-unescaped-entities */}
-                        <p>
-                            {/* eslint-disable-next-line react/no-unescaped-entities */}
-                            Additionally, we are tired of seeing fees associated with things that shouldn't have fees, like giving money to friends or family. So, we are building a solution. Whoever and wherever you are, we aim to make sending money across borders free and simplify the financial accounts you need.
-                        </p>
-
-                        <p>
-                            To achieve our goal, our amazing team has assembled to tirelessly work on improving your financial experience.
-                        </p>
-
-                    </div>
                     <div>
                         <Image src={images.about1} width={"500"} height={"300"} />
                     </div>
@@ -104,10 +106,13 @@ const AboutUs = () => {
 
                 {/*Send Money Section*/}
                 <section className={"bg-white flex flex-col justify-center items-center text-center gap-8 pt-8"}>
-                    <h1>Change How You Send Money</h1>
+                    <h1 className={"text-2xl md:text-4xl"}>Change How You Send Money</h1>
                     <button className={"bg-black text-white rounded-full px-16 py-1"}>Register</button>
 
-                    <Image src={images.about2}  height={"1200"} />
+                    <div className={"px-16"}>
+                        <Image src={images.about2}  height={"1200"} />
+                    </div>
+
 
 
                 </section>

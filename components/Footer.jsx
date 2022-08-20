@@ -2,34 +2,40 @@ import React from 'react';
 import {FaApple, FaFacebook, FaGoogle, FaLinkedinIn, FaTwitter} from "react-icons/fa";
 import Link from "next/link";
 import Button from "./Button";
+import Icons from "./Icons";
 
 const Footer = () => {
     return (
-        <div className={"w-full bg-white py-12"}>
+        <div className={"w-full bg-white py-12 bg-[#FDFEFF]"}>
             {/*Button and Social Icons*/}
             <div className={" flex flex-col justify-center items-center gap-8 md:gap-0 md:flex-row md:justify-around w-full "}>
                 <div >
                     <Button/>
                 </div>
 
+                {/* Imported Icons as SVG from components folder*/}
+                <Icons/>
 
-                <div className={"flex gap-3"}>
-                    <div className={"bg-gray-200 rounded p-2"}>
-                        <FaGoogle size={"20"}  />
-                    </div>
-                    <div className={"bg-gray-200 rounded p-2"}>
-                        <FaApple size={"20"}  />
-                    </div>
-                    <div className={"bg-gray-200 rounded p-2"}>
-                        <FaFacebook size={"20"}  />
-                    </div>
-                    <div className={"bg-gray-200 rounded p-2"}>
-                        <FaLinkedinIn size={"20"}  />
-                    </div>
-                    <div className={"bg-gray-200 rounded p-2"}>
-                        <FaTwitter size={"20"}  />
-                    </div>
-                </div>
+                {/*<div className={"flex gap-3"}>*/}
+                {/*    <div className={"bg-gray-200 rounded p-2"}>*/}
+                {/*        <FaGoogle size={"20"}  />*/}
+                {/*    </div>*/}
+                {/*    <div className={"bg-gray-200 rounded p-2"}>*/}
+                {/*        <FaApple size={"20"}  />*/}
+                {/*    </div>*/}
+                {/*    <div className={"bg-gray-200 rounded p-2"}>*/}
+                {/*        <FaFacebook size={"20"}  />*/}
+                {/*    </div>*/}
+                {/*    <div className={"bg-gray-200 rounded p-2"}>*/}
+                {/*        <FaLinkedinIn size={"20"}  />*/}
+                {/*    </div>*/}
+                {/*    <div className={"bg-gray-200 rounded p-2"}>*/}
+                {/*        <FaTwitter size={"20"}  />*/}
+                {/*    </div>*/}
+                {/*</div>*/}
+
+
+
             </div>
 
 

@@ -6,25 +6,25 @@ import Footer from "../components/Footer";
 
 const Features = () => {
     return (
-        <div>
+        <div className={"bg-[#FDFEFF]"}>
             <Navbar/>
 
             {/*Heading*/}
-            <div className={"h-96 w-full flex flex-col justify-center items-center "}>
+            <section className={"h-96 w-full flex flex-col justify-center items-center "}>
                 <div className={"w-[95%] sm:w-[80%] md:w-[70%] lg:w-[50%] text-center space-y-5"}>
                     <h1 className={"text-[#005ff9]"}>Features</h1>
                     <h1>Spore is an easy way to spen,
                         send, and save money.</h1>
                 </div>
 
-            </div>
+            </section>
 
 
             {/*Line Break*/}
             <div className={"h-0.5 bg-gray-200 w-[90%] mx-auto"}></div>
 
 
-            <div className={"flex flex-col justify-center items-center gap-12"}>
+            <div className={"flex flex-col justify-center items-center gap-12 pt-12"}>
                 {/*Spend Section*/}
                 <div className={"flex flex-col md:flex-row gap-4 justify-center items-center w-[85%] "}>
                     <div className={"w-[100%] md:w-[50%] "}>
@@ -43,7 +43,7 @@ const Features = () => {
                 <div className={"h-0.5 bg-gray-200 w-[90%] mx-auto"}></div>
 
                 {/*Billing Section*/}
-                <div className={"flex flex-col md:flex-row gap-4 justify-center items-center w-[85%] "}>
+                <section className={"flex flex-col md:flex-row gap-4 justify-center items-center w-[85%] mb-10"}>
                     <div className={"w-[100%] md:w-[50%] "}>
                         <label>Billing</label>
                         <h1>See your charges and deposits in one place</h1>
@@ -54,11 +54,12 @@ const Features = () => {
                     <div>
                         <Image src={images.mobile2} width={"600"} height={"400"} />
                     </div>
-                </div>
+                </section>
             </div>
 
 
-
+            {/*Line Break*/}
+            <div className={"h-0.5 bg-gray-200 w-[90%] mx-auto"}></div>
 
             {/*Footer*/}
             <Footer/>
